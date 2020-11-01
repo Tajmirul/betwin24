@@ -1,0 +1,11 @@
+{
+  "name": "betwin69",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -w scss -o css"
+  },
+  "author": "",
+  "license": "ISC"
+}

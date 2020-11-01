@@ -1,0 +1,19 @@
+.side-bar{
+
+	.all-games{
+		border-radius: 3px;
+		background-color: darken($color-theme, 10);
+		overflow: hidden;
+
+		a{
+
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba($color-white, .3);
+			}
+
+			&.active, &:hover{
+				background-color: $color-theme;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+// font sizes ------------------------------------
+.fz-extra-small{ font-size: 1.2rem !important; }
+.fz-small{ font-size: 1.4rem !important; }
+.fz-normal{ font-size: 1.6rem !important; }
+.fz-large{ font-size: 2rem !important; }
+.fz-extra-large{ font-size: 2.4rem !important; }
+
+
+// colors ------------------------------------
+.text-black{ color: $color-black !important; }
+.text-theme{ color: $color-theme !important; }
+.text-theme-dark{ color: $color-theme-dark !important; }
+
+.hover-text-black:hover{ color: $color-black !important; }
+.hover-text-dark:hover{ color: $color-dark !important; }
+.hover-text-white:hover{ color: $color-white !important; }
+.hover-text-theme:hover{ color: $color-theme !important; }
+.hover-underline:hover{ text-decoration: underline; }
+
+// background color ----------------------
+.bg-black{ background-color: $color-black !important; }
+.bg-theme{ background-color: $color-theme !important; }
+.bg-theme-light{ background-color: $color-theme-light; }
+.bg-theme-extra-light{ background-color: $color-theme-extra-light; }
+.bg-yellow{ background-color: #FFC107 !important; }
+.bg-gray{ background-color: #DFDFDF; }
+
+.hover-bg-dark:hover{ background-color: $color-dark !important; }
+.hover-bg-black:hover{ background-color: $color-black !important; }
+.hover-bg-white:hover{ background-color: $color-white !important; }
+.hover-bg-theme:hover{ background-color: $color-theme !important; }
+
+// border color --------------
+.border-theme-dark{ border-color: $color-theme-dark !important; }
+
+// user select -------------------
+.user-selection-none{ user-select: none; }

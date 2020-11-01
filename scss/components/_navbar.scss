@@ -1,0 +1,42 @@
+header{
+	nav{
+		background-image: linear-gradient(to top, darken($color-theme, 10), lighten($color-theme, 10));
+
+		ul{			
+			li{
+				position: relative;
+
+				&:hover ul {
+					transform: translateY(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			ul{
+				padding: 1rem .5rem;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				width: 25rem;
+				background: $color-white;
+				z-index: 1;
+				transition: .3s;
+				transform: translateY(1rem);
+				opacity: 0;
+				visibility: hidden;
+				li{
+					a{
+						&:hover{
+							background-color: darken($color-white, 10);
+						}
+					}
+				}
+			}
+		}
+	}
+	.navigation{
+		img{
+			height: 3rem;
+		}
+	}
+}

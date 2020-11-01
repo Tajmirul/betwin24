@@ -1,0 +1,44 @@
+.popup-container{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+	overflow-y: scroll;
+}
+
+.popup{
+	width: 96%;
+	max-width: 70rem;
+	background-color: $color-theme-extra-light;
+	position: absolute;
+	top: 4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	z-index: 2;
+
+	.close-popup{
+		cursor: pointer;
+	}
+}
+
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color-black, .8);
+	z-index: 1;
+	// display: none;
+}
+
+
+
+// testing -------------------
+.popup.sign-up{
+	// display: block;
+}

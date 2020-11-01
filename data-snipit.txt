@@ -1,0 +1,42 @@
+
+// matches -------------------------
+FC Sochi VS Lokomotiv Moscow
+Inter Millan VS Parma
+Las Palmas VS Real Oviedo
+Liverpool VS West Ham United
+Osasuna VS Atlético Madrid
+Borussia M'gladbach VS RB Leipzig
+
+
+// shots --------------------------------------------
+Full Time Result
+To Win The 1st Half
+1st Goal Scorer Team
+Total Match Goal [Odd/Even]
+Total Match Goal [Under/Over]
+Penalty In The Match
+
+
+// fields -----------------------------------------
+Yes 
+No
+No Goal
+Parma
+Drow
+Odd 
+Even
+
+// tornament ----------------------------------------
+Spain LaLiga 2
+England Premier League
+Spain LaLiga
+Germany Bundesliga
+Portugal Primeira Liga
+France Ligue 2
+Italy Serie A
+France Ligue 1
+Indian Premier League
+
+
+
+<p class="mb-0 "><span class="tornament">Italy Serie A</span> | <span class="time">11:30</span></p>

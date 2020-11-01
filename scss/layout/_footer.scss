@@ -1,0 +1,7 @@
+footer{
+    background-color: darken($color-theme, 10);
+    
+    & * {
+    	color: $color-white;
+    }
+}
