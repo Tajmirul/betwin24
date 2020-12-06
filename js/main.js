@@ -1,61 +1,54 @@
 $(document).ready(function () {
 
-    /* magnificPopup img view */
-    // $('.popup-image').magnificPopup({
-    //     type: 'image',
-    //     gallery: {
-    //         enabled: true
-    //     }
-    // });
 
-    /* magnificPopup video view */
-    // $('.popup-video').magnificPopup({
-    //     type: 'iframe'
-    // });
-
-    //for menu active class
-    // $('.portfolio-menu button').on('click', function (event) {
-    //     $(this).siblings('.active').removeClass('active');
-    //     $(this).addClass('active');
-    //     event.preventDefault();
-    // });
-
-    // WOW active
-    // new WOW().init();
-
-    // slick slider for banner 
-    // $('.banner-slider').slick({
-    //     prevArrow: '<i class="arrows prev icofont-rounded-left"></i>',
-    //     nextArrow: '<i class="arrows next icofont-rounded-right"></i>',
-    //     // dots: true,
-    //     autoplay: true
-    // });
-
-    // my code ----------------------------------------------------------------------
-
-    // open menu --------------------------
-    // $('.navigation > ul > li').hover(function() {
-    //     console.log($(this).children('ul.submenu'));
-    //     console.log(3434)
-
-
-    //     $(this).children('ul').slideDown(200);
-    // });
-
-    // $('.nav ul li').blur(function() {
-    //     $(this).children('ul').slideUp(200);
-    // });
-    
+    // my code ----------------------------------------------------------------------    
+    var placeBetPopup = $('#place-bet');
 
     // game filter ----------------------------
-    $('.side-bar a').click(filter);
+    $('.side-bar a').click(function(event) {
+
+        // adding active class to clicked side-bar item
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        // hideing all element
+        $('.all-match').hide();
+
+        // show filtered elements
+        $($(this).data('show')).show();
+
+
+        event.preventDefault();
+
+    });
 
     // all popup ----------------------------
     $('.open-popup').click(function(event) {
 
+        var dataPopup = $(this).data('popup');
+
         $('.popup-container').show();
-        $($(this).data('popup')).fadeIn(200);
+
+        if (dataPopup === '#place-bet'){
+
+            // getting data (field-data, selected-shot, selected-teams, bet-rate)
+            let  betRate = $(this).text();
+            let fieldData = $(this).prev('p').text();
+            let selectedShot = $($(this).parents('.collapse')[0]).prev().text();
+            let selectedTeams = $($(this).parents('.collapse')[1]).prev().find('.teams').text();
+
+            // putting data to popup
+            placeBetPopup.find('.bet-rate .number').text(betRate);
+            placeBetPopup.find('.field-data').text(fieldData);
+            placeBetPopup.find('.selected-shot').text(selectedShot);
+            placeBetPopup.find('.selected-teams').text(selectedTeams);
+            updateBet();
+
+        }
+
+        $(dataPopup).fadeIn(200);
         $('.overlay').fadeIn(200);
+
 
         event.preventDefault();
     });
@@ -67,36 +60,30 @@ $(document).ready(function () {
 
     });
 
+    $(placeBetPopup.find('.bet-amount')[0]).on('input', updateBet);
 
 
+    function updateBet() {
+
+        // getting rate and amount
+        let betRate = parseFloat(placeBetPopup.find('.bet-rate .number').text());
+
+        let betAmount = $(placeBetPopup.find('input.bet-amount')[0]).val();
+
+        // update total stake
+        if (betAmount === ''){
+            placeBetPopup.find('.total-stake .number').text('0');
+        } else {
+            placeBetPopup.find('.total-stake .number').text(betAmount);
+        }
+        placeBetPopup.find('.posible-return .number').text(betRate * betAmount);
+
+        // update posible return
 
 
-
-
-
-
-
-
+    };
 
 
 });
 
 
-// game filter function
-
-function filter(event) {
-
-    // adding active class to clicked side-bar item
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-
-    // hideing all element
-    $('.all-match').hide();
-
-    // show filtered elements
-    $($(this).data('show')).show();
-
-
-    event.preventDefault();
-
-};

@@ -10,7 +10,7 @@ html {
   font-size: 10px; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #fff; }
@@ -176,7 +176,7 @@ label {
   background-color: #a8ebc4; }
 
 .bg-theme-extra-light {
-  background-color: #d1f5e0; }
+  background-color: #e6f9ee; }
 
 .bg-yellow {
   background-color: #FFC107 !important; }
@@ -350,7 +350,7 @@ header .navigation img {
 .popup {
   width: 96%;
   max-width: 70rem;
-  background-color: #d1f5e0;
+  background-color: #e6f9ee;
   position: absolute;
   top: 4rem;
   left: 50%;
@@ -367,4 +367,5 @@ header .navigation img {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1; }
+  z-index: 1;
+  display: none; }
